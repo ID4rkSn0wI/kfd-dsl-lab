@@ -14,7 +14,7 @@ fun check02(response: HttpResponse): Boolean {
     if (response.status != 200) return false
     val values = headerValues(response, "Content-Type")
     if (values.none { it.startsWith("application/json") }) return false
-    if (response.body == null || response.body.isEmpty()) return false
+    if (response.body.isNullOrEmpty()) return false
     return true
 }
 
