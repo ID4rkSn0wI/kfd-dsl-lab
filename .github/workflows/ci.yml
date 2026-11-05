@@ -16,7 +16,7 @@ jobs:
           java-version: '25'
       - name: Build
         shell: bash
-        run: bash ./gradlew --no-daemon assemble
+        run: bash ./gradlew build --no-daemon assemble
       - name: Tests
         shell: bash
-        run: bash ./gradlew --no-daemon test
+        run: bash ./gradlew :app:test --no-daemon test
